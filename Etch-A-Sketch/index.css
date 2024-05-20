@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container{
+    height: 100%;
+    width: 60%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.row{
+    display: flex;
+    background-color: white;
+    height: 6.25%;
+    width: 6.25%;
+    border: 1px solid black;
+    margin: 0;
+    
+}
+
+.row:hover{
+    background-color: aquamarine;
+}
+
