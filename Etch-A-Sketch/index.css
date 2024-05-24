@@ -29,9 +29,24 @@ body{
     background-color: white;
     height: 6.25%;
     width: 6.25%;
-    border: 1px solid black;
+    border: 1px inset black;
     margin: 0;
+    padding: 0;
     
+}
+
+#colors {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button{
+    height: 100%;
+    width: auto;
+    margin: auto;
 }
 /*
 .row:hover{
