@@ -71,8 +71,8 @@ rainbow.addEventListener('click',(e)=>{
 gridSizeBtn.addEventListener('click', ()=>{
     let newGrid = gridSize.value;
     Number(newGrid);
-   if(newGrid > 250 || newGrid < 4){
-     return alert('enter a number between 10 and 99');
+   if(newGrid > 100 || newGrid < 4){
+     return alert('enter a number between 4 and 99');
    } else {
      container.innerHTML='';
      return createCanvass(newGrid);

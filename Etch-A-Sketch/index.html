@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <h1>Etch-a-Sketch</h1>
-    <label for="grid-count">
-        Select Grid Size
-        <input id="grid-count" type="number" value="" minlength="10" maxlength="99"> </input>
-        <button id="grid-btn" type="submit">Submit</button>
-    </label>
+    <div id="grid-input">
+        <label for="grid-count">
+            Select Grid Size:
+            <input id="grid-count" type="number" value="" minlength="10" maxlength="99"> </input>
+            <button id="grid-btn" type="submit">Submit</button>
+        </label>
+    </div>
     <div id="colors">
         <button class ='color' value="Red"></button>
         <button class ='color' value="Green"></button>
@@ -21,15 +26,19 @@
         <button class ='color' value="Magenta"></button>
         <button class ='color' value="Yellow"></button>
         <button class ='color' value="Black"></button>
-        <button class ='color' id ='rainbow' value="">Rainbow</button>
-       
-        <button class ='color' id ='eraser' value="">Eraser</button>
+        <button class ='color' id ='rainbow' value="">🌈</button>
+        <button class ='color' id ='eraser' value="">🧹</button>
     </div>
     
     <div id="container">
         
     </div>
     <script src="index.js"></script>
-    <footer>my Footer</footer>
+    <footer>
+        <p>Check out my Github Page</p>
+        <a href="https://github.com/samglz10/Etch-A-Sketch.git" target="_blank">
+            <img class="icon" src="./assets/GitHub.png" /> 
+        </a>
+    </footer>
 </body>
 </html>
