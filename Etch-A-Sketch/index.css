@@ -48,11 +48,17 @@ label{
     background-color: white;
     border-radius: 30px;
     border: 1px solid black;
+    font-size: large;
 }
 
 input{
-    height: 50%;
+    height: 100%;
+    width: 50%;
     margin: 0 15px;
+    border: 1px solid;
+    border-radius: 30px;
+    text-align: center;
+    font-size: x-large;
 }
 
 #grid-btn{
@@ -60,6 +66,7 @@ input{
     width: auto;
     margin: 0;
     border-radius: 30px;
+    font-size: large;
 }
 
 #container{
@@ -174,4 +181,8 @@ img{
 p{
     width: auto;
     margin: 0;
+    text-overflow:ellipsis;
+    text-wrap:wrap;
+ 
+    
 }
