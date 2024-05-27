@@ -6,8 +6,6 @@ html {
     font-style: normal;
 }
 
-
-
 h1{
     margin: 15px ;
 }
@@ -70,15 +68,14 @@ input{
 }
 
 #container{
-    height: 90%;
+    height: 100%;
     width: 90%;
-    margin: 10px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: row;
-    border:  10px outset rgb(85, 85, 85);
-    flex-grow: 1;
+    border: 10px outset rgb(85, 85, 85);
     padding: 0;
     border-radius: 5px;
     background-color: white;
@@ -90,11 +87,12 @@ input{
     flex: 1;
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
 }
 .column{
     display: flex;
     flex: 1;
-    border: 1px inset black;
     height: 100%;
     width: 100%;
     margin: 0;
