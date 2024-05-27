@@ -9,7 +9,6 @@ const gridSize = document.getElementById('grid-count');
 const gridSizeBtn = document.getElementById('grid-btn');
 const rainbow = document.getElementById('rainbow');
 const getRows = document.getElementsByClassName('row');
-//const columnOfDivs = document.getElementById('div');
 
 const getColor=()=>{
     for(let i = 0; i < colors.length; i++){
@@ -22,7 +21,6 @@ const getColor=()=>{
         })
     } 
 }
-
 
 const createCanvass =(gridSize)=>{
     console.log(`createCanvass initiated...gridsize=${gridSize}`);
@@ -50,8 +48,6 @@ const createCanvass =(gridSize)=>{
 
 
 rainbow.addEventListener('click',(e)=>{
-   // getColor();
-    console.log(`rainbowColors initiated...${e.target.value}`)
     const red = Math.floor(Math.random() * 256); // Random integer between 0 and 255
     const green = Math.floor(Math.random() * 256);
     const blue = Math.floor(Math.random() * 256);
