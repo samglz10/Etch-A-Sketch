@@ -1,7 +1,7 @@
 
 //colors
 let defaultSizeGrid = 10;
-let currentColor ='';
+let currentColor ='red';
 const container = document.getElementById('container');
 const rowOfDivs = document.createElement('div');
 const colors = document.getElementsByClassName('color');
@@ -11,15 +11,13 @@ const rainbow = document.getElementById('rainbow');
 const getRows = document.getElementsByClassName('row');
 //const columnOfDivs = document.getElementById('div');
 
-const getColor=(div)=>{
+const getColor=()=>{
     for(let i = 0; i < colors.length; i++){
-        //console.log(colors[i].value);
         let btn = colors[i];
-        //console.log(btn)
+        btn.style.backgroundColor = colors[i].value
         btn.addEventListener('click',()=>{
-            //console.log(`${btn.value}`)
             let currentColor = btn.value;
-            console.log(currentColor, 'getColor')
+            btn.style.backgroundColor = currentColor
             return color = currentColor;
         })
     } 
@@ -41,19 +39,9 @@ const createCanvass =(gridSize)=>{
             //columnOfDivs.value = 'hi'
             rowOfDivs.append(columnOfDivs);
             columnOfDivs.addEventListener('mouseover', (e)=>{
-                let grabColor = getColor();
-                console.log(color);
-                columnOfDivs.value = color;
-                columnOfDivs.style.backgroundColor = color;
-                console.log(columnOfDivs)
-                //getting undefined
-                
-                //let selectedColor = getColor();
-                //color = e.target.value;
-                //console.log(color, 3);
-               
-                
-                
+                getColor();
+                    columnOfDivs.value = color;
+                    columnOfDivs.style.backgroundColor = color;
                })
         }
     }
@@ -62,15 +50,21 @@ const createCanvass =(gridSize)=>{
 
 
 rainbow.addEventListener('click',(e)=>{
-    getColor();
+   // getColor();
     console.log(`rainbowColors initiated...${e.target.value}`)
     const red = Math.floor(Math.random() * 256); // Random integer between 0 and 255
     const green = Math.floor(Math.random() * 256);
     const blue = Math.floor(Math.random() * 256);
+    const random = ()=>{
+        return red, green, blue
+    }
+    random(red, green, blue);
+    
         let rainbowColor = `rgb(${red}, ${green}, ${blue})`;
         console.log(rainbowColor);
-        //rainbow.value = rainbowColor;
-        //return rainbowColor;
+        rainbow.value = rainbowColor;
+        rainbow.style.backgroundColor = rainbowColor;
+        return rainbowColor;
 })
 
 
@@ -84,38 +78,7 @@ gridSizeBtn.addEventListener('click', ()=>{
      return createCanvass(newGrid);
    }
  })
-
-
-
-
-
-
-/*
-columnOfDivs.addEventListener('click',()=>{
-    console.log('hovered');
-})
-*/
-
-
-/*
-
-const rainbowColors=()=>{
-    for(let i = 0; i < colors.length; i++){
-        let selectedColor = colors[i];
-        selectedColor.addEventListener('click',(e)=>{
-            let currentColor = e.target.value
-            columnOfDivs.addEventListener('mouseover', (e)=>{
-                columnOfDivs.style.backgroundColor = currentColor;
-                if(e.shiftKey){
-                    columnOfDivs.style.backgroundColor = currentColor;
-                }
-            })
-        })
-    }
-} 
-*/
-
-//getColor();
+getColor();
 createCanvass(defaultSizeGrid);
 
 

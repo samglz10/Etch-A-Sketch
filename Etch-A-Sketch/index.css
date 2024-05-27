@@ -13,15 +13,32 @@ body{
     align-items: center;
 }
 
+
+label{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    align-items: center;
+    margin: 0 5%;;
+}
+
+label > *{
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+    align-items: center;
+    margin: 10px 100px;;
+}
+
 #container{
-    height: 100%;
+    height: 90%;
     width: 90%;
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: row;
-    border:  3px inset black;
+    border:  10px inset black;
     flex-grow: 1;
     padding: 0;
 }
@@ -36,7 +53,9 @@ body{
 .column{
     display: flex;
     flex: 1;
-    border: 1px solid rgb(155, 154, 154);
+    border: 1px inset rgb(180, 180, 180);
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -46,13 +65,39 @@ body{
     margin: 10px;
     justify-content: center;
     align-items: center;
+    height: 25px;
+    width: 80%;
+    border-radius: ;
+}
+#colors > * {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
     width: 100%;
+    border: none;
+    color: rgb(48, 44, 44);
 }
 
 button{
     height: 100%;
     width: auto;
     margin: auto;
+}
+
+#rainbow{
+    color: black;
+}
+
+#eraser{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#black{
+    color: white;
 }
 /*
 .row:hover{
